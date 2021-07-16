@@ -37,7 +37,10 @@
 							<h1>DABS</h1>
 							<p>The <strong>D</strong>omain <strong>A</strong>gnostic <strong>B</strong>enchmark for <strong>S</strong>elf-supervised learning.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li><li><a href="#one" class="button scrolly">Read the Paper</a></li><li><a href="#one" class="button scrolly">See the Code</a></li>
+								<li><a href="#one" class="button scrolly">Learn more</a>
+								</li><li><a href="#one" class="button scrolly">Read the Paper</a></li>
+								<li><a href="#one" class="button scrolly">See the Code</a></li>
+								<li><a href="usage.html" class="button">Usage</a></li>
 							</ul>
 						</div>
 					</section>
@@ -45,37 +48,36 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/Pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Embedding</h2>
 									<p>First, data from pretraining datasets are embedded into vectors of uniform shape in order to allow for a domain-agnostic model architecture that does not depend on the shape of the data within each domain. We encourage the use of our provided embedding module, but participants may also create their own.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="images/Pic02.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Pretraining</h2>
 									<p>Participants have agency over the pretraining objective they choose, and the entire architecture of their model. The goal is to use pretraining datasets to condition a model that is performant accross transfer datasets within a domain, and ultimately to create an architecture and pretraining objective that is performant in this way accross all six domains.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+									
 									</ul>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="images/Pic03.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Transfer</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Transfer Learning</h2>
+									<p>In the adaptation layer, the model is given labeled data in the same domain as the pretraining data, but possibly from a different dataset and with a different end task. A linear classifier is provided as the adaptation layer in our baseline model, but participants may choose their own adaptation method so long as it is in the spirit of the benchmark.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
 									</ul>
 								</div>
 							</div>
@@ -85,42 +87,43 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>Domains</h2>
+							<p>We use six domains in order to capture performance over both traditional ML tasks that have extensive research communities (e.g. computer vision and NLP) and less studied/emerging focal point of the field (e.g. sensor and x-ray data). More information about selection criteria and specific datasets can be found in the DABS paper.</p>
 							<div class="features">
 								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon solid major fa-image"></span>
+									<h3>Natural Images</h3>
+									<p>Pretraining is done on the ImageNet dataset, and then transfer tasks cover a wide variety of natural image classification tasks.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon solid major fa-comments"></span>
+									<h3>Speech Recordings</h3>
+									<p>Pretraining is done on the Librispeech corpus, a large dataset of English speech recordings. Downstream tasks cover everything from speaker recognition to utterance classification.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon solid major fa-font"></span>
+									<h3>Text</h3>
+									<p>In order to encourage the production of models that function accross cultural lines, we use the multilingual mC4 dataset for pretraining in the text domain, and the PAWS-X multilingual paraphrase detection tasks for transfer tasks.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon solid major fa-running"></span>
+									<h3>Sensor</h3>
+									<p>Pretraining and transfer tasks are both derived from the PAMAP-2 dataset, a dataset consisting of readings from many body sensors over time, and labels describing the task the monitered people were doing at the time of measurement.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon solid major fa-x-ray"></span>
+									<h3>Chest X-ray</h3>
+									<p> For both pretraining and transfer tasks, we use the CheXpert dataset, which contain chest X-rays labeled with the particular conditions identafiable in each by human pathologists.</p>
 								</section>
 								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon major fa-file-image"></span>
+									<h3>Images with paired Text captions</h3>
+									<p>To attain coverage of multimodal domains, we include captioned images. Pretraining is done on the COCO dataset, with downstream transfer performance assessed by the Visual Question Answering task.</p>
 								</section>
 							</div>
+							<p>For information about dataset usage, and data origins, please see the appendix of the <a>DABS paper.</a></p>
 							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
+								<li><a href="generic.html" class="button">Read the Docs</a></li>
 							</ul>
 						</div>
 					</section>
@@ -128,7 +131,7 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
+							<h2>Get in touch //Replace this with Meet the Team page & button?</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
