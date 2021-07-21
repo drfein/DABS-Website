@@ -313,6 +313,7 @@ input, select, textarea {
 
 		hr.major {
 			margin: 3em 0;
+			border-bottom: solid 1.5px whitesmoke;
 		}
 
 	.align-left {
@@ -1998,6 +1999,12 @@ input, select, textarea {
 			width: 50%;
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
+			cursor: pointer
+		}
+
+		.features section:hover {
+			background-color: #b74e91;
+			
 		}
 
 			.features section:nth-child(-n + 2) {
@@ -3010,11 +3017,13 @@ input, select, textarea {
 			display: block;
 			position: relative;
 			width: 25em;
+			cursor: default;
 		}
 
 			.spotlights > section > .image img {
 				border-radius: 0;
 				display: block;
+				cursor: default;
 			}
 
 			.spotlights > section > .image:before {
@@ -3022,7 +3031,8 @@ input, select, textarea {
 				-webkit-transition: opacity 1s ease;
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
-				background: rgba(49, 36, 80, 0.9);
+				cursor: default;
+				background:#5052b5;
 				content: '';
 				display: block;
 				height: 100%;
@@ -3880,8 +3890,12 @@ input, select, textarea {
 		background-size: 100% 100%;
 	}
 
-		#intro p {
+		#intro .header {
 			font-size: 1.25em;
+		}
+		
+		#into .small {
+			font-size: 0.8em;
 		}
 
 			@media screen and (max-width: 980px) {
