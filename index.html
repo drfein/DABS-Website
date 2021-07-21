@@ -97,45 +97,45 @@
 							<p>We use six domains in order to capture performance over both traditional ML tasks that have extensive research communities (e.g. computer vision and NLP) and less studied/emerging focal point of the field (e.g. sensor and x-ray data). More information about selection criteria and specific datasets can be found in the DABS paper.</p>
 							<p>Select a domain to view more information about the datasets used.</p>
 							<div class="features">
-								<section class="domain" data-link="domains/images.html">
+								<section class="domain" data-link="/domains/images.html">
 									<span class="icon solid major fa-image"></span>
 									<h3>Natural Images</h3>
 									<p>Pretraining is done on the ImageNet dataset, and then transfer tasks cover a wide variety of natural image classification tasks.</p>
 								</section>
-								<section>
+								<section class="domain" data-link="/domains/speech.html">
 									<span class="icon solid major fa-comments"></span>
 									<h3>Speech Recordings</h3>
 									<p>Pretraining is done on the Librispeech corpus, a large dataset of English speech recordings. Downstream tasks cover everything from speaker recognition to utterance classification.</p>
 								</section>
-								<section class="domain" data-link="domains/text.html">
+								<section class="domain" data-link="/domains/text.html">
 										<span class="icon solid major fa-font"></span>
 										<h3>Text</h3>
-										<p>In order to encourage the production of models that function accross cultural lines, we use the multilingual mC4 dataset for pretraining in the text domain, and the PAWS-X multilingual paraphrase detection tasks for transfer tasks.</p>
+										<p>Natural Language Processing has among the largest machine learning communities. By including coverage of this domain, which is structurally different from the other domains, we hope to discover more powerful algorithms.</p>
 								</section>
-								<section>
+								<section class="domain" data-link="/domains/sensor.html">
 									<span class="icon solid major fa-running"></span>
 									<h3>Sensor</h3>
 									<p>Pretraining and transfer tasks are both derived from the PAMAP-2 dataset, a dataset consisting of readings from many body sensors over time, and labels describing the task the monitered people were doing at the time of measurement.</p>
 								</section>
-								<section>
+								<section class="domain" data-link="/domains/x-ray.html">
 									<span class="icon solid major fa-x-ray"></span>
 									<h3>Chest X-ray</h3>
 									<p> For both pretraining and transfer tasks, we use the CheXpert dataset, which contain chest X-rays labeled with the particular conditions identafiable in each by human pathologists.</p>
 								</section>
-								<section>
+								<section class="domain" data-link="/domains/paired.html">
 									<span class="icon major fa-file-image"></span>
 									<h3>Images with paired Text captions</h3>
 									<p>To attain coverage of multimodal domains, we include captioned images. Pretraining is done on the COCO dataset, with downstream transfer performance assessed by the Visual Question Answering task.</p>
 								</section>
-								<section>
+								<section class="domain" data-link="/domains/multi-lang.html">
 									<span class="icon solid major fa-language"></span>
 									<h3>Multi-language Text</h3>
-									<p>To attain coverage of multimodal domains, we include captioned images. Pretraining is done on the COCO dataset, with downstream transfer performance assessed by the Visual Question Answering task.</p>
+									<p>In order to encourage the production of models that function accross cultural lines, we use the multilingual mC4 dataset for pretraining in the text domain, and the PAWS-X multilingual paraphrase detection tasks for transfer tasks.</p>
 								</section>
-								<section>
+								<section class="domain" data-link="/domains/physics.html">
 									<span class="icon solid major fa-atom"></span>
 									<h3>Physics</h3>
-									<p>To attain coverage of multimodal domains, we include captioned images. Pretraining is done on the COCO dataset, with downstream transfer performance assessed by the Visual Question Answering task.</p>
+									<p>We incorporate data collected from within a particle accelerator to the benchmark. This highly specialized case demonstrates the usefulness of the benchmark in developing models that function out-of-the box in a wide variety of use cases, academic and otherwise.</p>
 								</section>
 							</div>
 							<p>For information about dataset usage, and data origins, please see the appendix of the <a>DABS paper.</a></p>
@@ -144,7 +144,7 @@
 					<script type="text/javascript">
 						$(document).ready(function() {
 							$(".domain").click(function() {
-								window.location = window.location.href.slice(0, window.location.href.indexOf("index.html")) + $(this).data('link')
+								window.location = window.location.href.slice(0, window.location.href.indexOf("/index.html")) + $(this).data('link')
 							});
 						});
 					</script>
@@ -176,7 +176,7 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>DABS is released under MIT License</li>
+						<li>DABS is released under MIT License.</li>
 					</ul>
 				</div>
 			</footer>
