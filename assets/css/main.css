@@ -1071,8 +1071,16 @@ input, select, textarea {
 			-o-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
 			border-radius:25px;
 			flex-direction: column;
-			min-width: 15em;
+			min-width: 18em;
 		}
+
+			.visibledevice {display:none;}
+			.visibledesktop {display:display;}
+
+			@media (max-width : 320px) {
+				.visibledevice {display:block;}
+				.visibledesktop {display:none;}
+			}
 
 			.roundedCorner .profilePic {
 				border-radius: 50%;
