@@ -1072,12 +1072,13 @@ input, select, textarea {
 			border-radius:25px;
 			flex-direction: column;
 			min-width: 18em;
+			display: block;
 		}
 
 			.visibledevice {display:none;}
 			.visibledesktop {display:display;}
 
-			@media (max-width : 320px) {
+			@media (max-width : 480px) {
 				.visibledevice {display:block;}
 				.visibledesktop {display:none;}
 			}
