@@ -16,6 +16,7 @@
 		<link rel="manifest" href="favicon/site.webmanifest">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://kit.fontawesome.com/ef70c722a8.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="is-preload">
 
@@ -42,12 +43,11 @@
 							<h1>DABS</h1>
 							<p class="header">The <strong>D</strong>omain <strong>A</strong>gnostic <strong>B</strong>enchmark for <strong>S</strong>elf-supervised learning.</p>
 							<hr class="major">
-							<p class="small" >Lorem ipsum dolor sit amet consectetur adipisicing elit. A excepturi et, sequi pariatur magnam dolore eos perspiciatis fugiat necessitatibus aut delectus corporis error iure deleniti non animi perferendis fuga, dolorum soluta, repellat quo odit recusandae aspernatur! Enim nesciunt optio eligendi sunt nobis nulla cupiditate perferendis perspiciatis aspernatur corporis assumenda iste et nostrum voluptates exercitationem impedit consequatur aperiam ab voluptas, facilis ducimus rerum ex reiciendis eaque. Ab voluptas cupiditate sequi distinctio quo illo beatae saepe natus aut nesciunt, possimus eius quos consequatur quasi illum nostrum minima facilis? Totam ea laboriosam expedita, aut modi a, doloremque voluptatem tenetur deleniti nam consequuntur id?</p>
+							<p class="small" >In recent years, the advent of self-supervised learning (SSL) has driven substantial progress in the field of artificial intelligence. By extracting meaningful features from unlabeled data, SSL algorithms grant models access to the troves of information produced by modern society. Unfortunately, existing algorithms are specific to individual domains (BERT for natural language processing, SimCLR for computer vision, etc.). This greatly reduces the impact and reach of SSL, as each domain requires attention from the research community to develop a tailor-made solution. To encourage research of domain-agnostic SSL models that function out-of-the box on a variety of problems, we present DABS, the domain-agnostic benchmark for self supervised learning. </p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a>
-								</li><li><a href="#one" class="button scrolly">Read the Paper</a></li>
-								<li><a href="#one" class="button scrolly">See the Code</a></li>
-								<li><a href="team.html" class="button scrolly">Meet the Team</a></li>
+								</li><li><a href="#one" class="button">Read the Paper</a></li>
+								<li><a href="https://github.com/alextamkin/domain_agnostic_benchmark" class="button">See the Code</a></li>
+								<li><a href="team.html" class="button">Meet the Team</a></li>
 							</ul>
 						</div>
 					</section>
@@ -102,41 +102,46 @@
 									<span class="icon solid major fa-image"></span>
 									<h3>Natural Images</h3>
 									<p>Pretraining is done on the ImageNet dataset, and then transfer tasks cover a wide variety of natural image classification tasks.</p>
+									<span><em>Press to learn more</em></span>
 								</section>
 								<section class="domain" data-link="/domains/speech.html">
 									<span class="icon solid major fa-comments"></span>
 									<h3>Speech Recordings</h3>
 									<p>Pretraining is done on the Librispeech corpus, a large dataset of English speech recordings. Downstream tasks cover everything from speaker recognition to utterance classification.</p>
+									<span><em>Press to learn more</em></span>
 								</section>
 								<section class="domain" data-link="/domains/text.html">
 										<span class="icon solid major fa-font"></span>
 										<h3>Text</h3>
 										<p>Natural Language Processing has among the largest machine learning communities. By including coverage of this domain, which is structurally different from the other domains, we hope to discover more powerful algorithms.</p>
-								</section>
+										<span><em>Press to learn more</em></span>
+									</section>
 								<section class="domain" data-link="/domains/sensor.html">
 									<span class="icon solid major fa-running"></span>
 									<h3>Sensor</h3>
 									<p>Pretraining and transfer tasks are both derived from the PAMAP-2 dataset, a dataset consisting of readings from many body sensors over time, and labels describing the task the monitered people were doing at the time of measurement.</p>
+									<span><em>Press to learn more</em></span>
 								</section>
 								<section class="domain" data-link="/domains/x-ray.html">
 									<span class="icon solid major fa-x-ray"></span>
 									<h3>Chest X-ray</h3>
 									<p> For both pretraining and transfer tasks, we use the CheXpert dataset, which contain chest X-rays labeled with the particular conditions identafiable in each by human pathologists.</p>
+									<span><em>Press to learn more</em></span>
 								</section>
 								<section class="domain" data-link="/domains/paired.html">
 									<span class="icon major fa-file-image"></span>
 									<h3>Images with paired Text captions</h3>
 									<p>To attain coverage of multimodal domains, we include captioned images. Pretraining is done on the COCO dataset, with downstream transfer performance assessed by the Visual Question Answering task.</p>
+									<span><em>Press to learn more</em></span>
 								</section>
-								<section class="domain" data-link="/domains/multi-lang.html">
+								<section class="domain" data-link="/domains/languages.html">
 									<span class="icon solid major fa-language"></span>
 									<h3>Multi-language Text</h3>
 									<p>In order to encourage the production of models that function accross cultural lines, we use the multilingual mC4 dataset for pretraining in the text domain, and the PAWS-X multilingual paraphrase detection tasks for transfer tasks.</p>
+									<span><em>Press to learn more</em></span>
 								</section>
-								<section class="domain" data-link="/domains/physics.html">
-									<span class="icon solid major fa-atom"></span>
-									<h3>Physics</h3>
-									<p>We incorporate data collected from within a particle accelerator to the benchmark. This highly specialized case demonstrates the usefulness of the benchmark in developing models that function out-of-the box in a wide variety of use cases, academic and otherwise.</p>
+								<section class="visibledesktop" class="domain" style="text-align: center;" data-link="#one">
+									<h1 style="margin-right: 1em; margin-top: 0.5em;font-size: 5em; color: rgba(255, 255, 255, 0.35);">DABS</h1>
 								</section>
 							</div>
 							<p>For information about dataset usage, and data origins, please see the appendix of the <a>DABS paper.</a></p>

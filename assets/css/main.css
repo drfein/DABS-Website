@@ -1062,7 +1062,7 @@ input, select, textarea {
 		}
 
 		.roundedCorner {
-			height: 30em;
+			height: 26em;
 			border: solid 0.1px #953d75;
 			background-color: #953d75;
 			box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
@@ -1078,7 +1078,7 @@ input, select, textarea {
 			.visibledevice {display:none;}
 			.visibledesktop {display:display;}
 
-			@media (max-width : 480px) {
+			@media (max-width : 950px) {
 				.visibledevice {display:block;}
 				.visibledesktop {display:none;}
 			}
@@ -1874,13 +1874,13 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease;
 		transition: border-color 0.2s ease;
 		background-color: transparent;
-		border: solid 1px !important;
-		border-color: rgba(255, 255, 255, 0.15) !important;
+		border: solid 2px !important;
+		border-color: #ffffff !important;
 		border-radius: 3em;
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.6em;
+		font-size: 0.8em;
 		font-weight: bold;
 		height: calc(4.75em + 2px);
 		letter-spacing: 0.25em;
@@ -2045,7 +2045,6 @@ input, select, textarea {
 
 		.features section:hover {
 			background-color: #b74e91;
-			
 		}
 
 			.features section:nth-child(-n + 2) {
@@ -2783,7 +2782,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 835px) {
 
 			ul.actions:not(.fixed) {
 				-moz-flex-direction: column;
@@ -2909,6 +2908,19 @@ input, select, textarea {
 		}
 
 /* Section/Article */
+
+
+	section.domain {
+		align-items: center;
+	}
+
+	section.domain span em {
+		position: absolute;
+		bottom: 10px;
+		margin-left: 4.3em;
+		font-size: 0.9em;
+
+	}
 
 	section.special, article.special {
 		text-align: center;
