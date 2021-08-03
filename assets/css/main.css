@@ -1075,6 +1075,23 @@ input, select, textarea {
 			display: block;
 		}
 
+		.dataset {
+			/* background-color: #bf64bc; */
+			/* background-color: rgb(196, 100, 70); */
+			/* background-color: #5e42a6; */
+			background-color: #953d75;
+			box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
+			-moz-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
+			-webkit-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
+			-o-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
+			border-radius:25px;
+			display: block;
+			padding: 2em;
+			flex-direction: row;
+			text-justify: left;
+			margin-bottom: 3em;
+		}
+
 			.visibledevice {display:none;}
 			.visibledesktop {display:display;}
 

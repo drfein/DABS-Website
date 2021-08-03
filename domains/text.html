@@ -32,12 +32,15 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Text</h1>
+							<p>The discrete nature of text makes it markedly different from the other domains studied. This adds significant coverage to the benchmark. Find dataset licenses in the paper. For the bibtex citations of these datasets, click <a href="../citations/text.html">here</a>.</p>
 							<span class="image fit"><img src="../images/domains/lorem_ipsum.png" alt="" /></span>
-							<p>The discrete nature of text makes it markedly different from the other domains studied. This adds significant coverage to the benchmark.</p>
-
 							<!-- Pretraining -->
 
 							<h2>Pretraining</h2> 
+
+							<div class="dataset">
+
+							<h4>WikiText-103</h4>
 							<p>We use the <a href="https://arxiv.org/abs/1609.07843">WikiText-103 dataset</a> to pretrain for NLP tasks. WikiText-103 is a collection of over 100 million tokens extracted from Wikipedia articles classified as either ‘good’ or ‘featured.’</p>
 							<p>Example:</p>
 							<pre><code>
@@ -47,299 +50,289 @@ Super Mario Land is a 1989 side @-@ scrolling platform video game , the first in
 At Nintendo CEO Hiroshi Yamauchi 's request , Game Boy creator Gunpei Yokoi 's Nintendo R & D1 developed a Mario game to sell the new console . It was the first portable version of Mario and the first to be made without Mario creator and Yokoi protégé Shigeru Miyamoto . Accordingly , the development team shrunk Mario gameplay elements for the device and used some elements inconsistently from the series . Super Mario Land was expected to showcase the console until Nintendo of America bundled Tetris with new Game Boys . The game launched alongside the Game Boy first in Japan ( April 1989 ) and later worldwide . Super Mario Land was later rereleased for the Nintendo 3DS via Virtual Console in 2011 again as a launch title , which featured some tweaks to the game 's presentation .
 Initial reviews were laudatory . Reviewers were satisfied with the smaller Super Mario Bros. , but noted its short length . They considered it among the best of the Game Boy launch titles . The handheld console became an immediate success and Super Mario Land ultimately sold over 18 million copies , more than that of Super Mario Bros. 3 . Both contemporaneous and retrospective reviewers praised the game 's soundtrack . Later reviews were critical of the compromises made in development and noted Super Mario Land 's deviance from series norms . The game begot a series of sequels , including the 1992 Super Mario Land 2 : 6 Golden Coins , 1994 Wario Land : Super Mario Land 3 , and 2011 Super Mario 3D Land , though many of the original 's mechanics were not revisited . The game was included in several top Game Boy game lists and debuted Princess Daisy as a recurring Mario series character .
 							</code></pre>
-							<p>Citation:</p>
-							<pre><code>
-​​@article{merity2016pointer,
-	title={Pointer sentinel mixture models},
-	author={Merity, Stephen and Xiong, Caiming and Bradbury, James and Socher, Richard},
-	journal={arXiv preprint arXiv:1609.07843},
-	year={2016}
-}								  
-							</code></pre>
+							</div>
 
 							<!-- Transfer -->
 
 							<h2>Transfer</h2>
 							<p>We use the popular <a href="https://gluebenchmark.com/">GLUE benchmark</a> to assess performance across a variety of NLP tasks including single-sentence tasks, similarity and paraphrase tasks, and inference tasks.</p>
-							
-							<!-- Single Sentence Tasks -->
-							<h3>Single Sentence Tasks</h3>
 
 							<!-- CoLA -->
-							<h4>CoLA</h4>
-							<p>The <a href="https://nyu-mll.github.io/CoLA/">Corpus of Linguistic Acceptability (CoLA)</a> consists of over 10,000 examples of single-sentences labeled by whether or not they are grammatically acceptable English sentences. This is presented as a binary classification task.</p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Sentence</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1 (acceptable)</td>
-											<td>It is this hat that it is certain that he was wearing.</td>
-										</tr>
-										<tr>
-											<td>0 (unacceptable)</td>
-											<td>The inspector analyzed the soundness in the building.</td>
-										</tr>
-									</tbody>
-								</table>
+
+								<div class="dataset">
+									<h4>CoLA</h4>
+									<p>The <a href="https://nyu-mll.github.io/CoLA/">Corpus of Linguistic Acceptability (CoLA)</a> consists of over 10,000 examples of single-sentences labeled by whether or not they are grammatically acceptable English sentences. This is presented as a binary classification task.</p>
+									<p>Example:</p>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Label</th>
+													<th>Sentence</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1 (acceptable)</td>
+													<td>It is this hat that it is certain that he was wearing.</td>
+												</tr>
+												<tr>
+													<td>0 (unacceptable)</td>
+													<td>The inspector analyzed the soundness in the building.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<!-- SST2 -->
+
+								<div class="dataset">
+								<h4>SST2</h4>
+
+								<p>The <a href="https://nlp.stanford.edu/sentiment/">Stanford Sentiment Treebank dataset (SST2) dataset</a> consists of roughly 70,000 examples. Each example contains a sentence taken from a movie review as well as a human-annotated sentiment (negative or positive). This task also is also presented as a binary classification task.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Sentence</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>0 (negative)</td>
+												<td>, this cross-cultural soap opera is painfully formulaic and stilted.</td>
+											</tr>
+											<tr>
+												<td>1 (positive)</td>
+												<td>company once again dazzle and delight us</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<p>Citation:</p>
-							<pre><code>
-@article{warstadt2018neural,
-	title={Neural Network Acceptability Judgments},
-	author={Warstadt, Alex and Singh, Amanpreet and Bowman, Samuel R},
-	journal={arXiv preprint arXiv:1805.12471},
-	year={2018}
-}																
-							</code></pre>
-
-							<!-- SST2 -->
-							<h4>SST2</h4>
-
-							<p>The <a href="https://nlp.stanford.edu/sentiment/">Stanford Sentiment Treebank dataset (SST2) dataset</a> consists of roughly 70,000 examples. Each example contains a sentence taken from a movie review as well as a human-annotated sentiment (negative or positive). This task also is also presented as a binary classification task.</p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Sentence</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>0 (negative)</td>
-											<td>, this cross-cultural soap opera is painfully formulaic and stilted.</td>
-										</tr>
-										<tr>
-											<td>1 (positive)</td>
-											<td>company once again dazzle and delight us</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<p>Citation:</p>
-							<pre><code>
-@inproceedings{socher2013recursive,
-	title={Recursive deep models for semantic compositionality over a sentiment treebank},
-	author={Socher, Richard and Perelygin, Alex and Wu, Jean and Chuang, Jason and Manning, Christopher D and Ng, Andrew and Potts, Christopher},
-	booktitle={Proceedings of the 2013 conference on empirical methods in natural language processing},
-	pages={1631--1642},
-	year={2013}
-}																							  
-							</code></pre>
-
-							<!-- Similarity and Paraphrase Tasks -->
-							<h3>Similarity and Paraphrase Tasks</h3>
 
 							<!-- MRPC -->
-							<h4>MRPC</h4>
 
-							<p>The <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52398">Microsoft Research Paraphrase Corpus (MRPC)</a> is composed of sentences pulled from news sources across the internet. Each example contains a pair of sentences that are human-labeled as either semantically equivalent or not. The corpus includes around 6,000 examples.</p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Sentence 1</th>
-											<th>Sentence 2</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>0 (not_equivalent)</td>
-											<td>The identical rovers will act as robotic geologists , searching for evidence of past water .</td>
-											<td>The rovers act as robotic geologists , moving on six wheels .</td>
-										</tr>
-										<tr>
-											<td>1 (equivalent)</td>
-											<td>Spider-Man snatched $ 114.7 million in its debut last year and went on to capture $ 403.7 million .</td>
-											<td>Spider-Man , rated PG-13 , snatched $ 114.7 million in its first weekend and went on to take in $ 403.7 million .</td>
-										</tr>
-									</tbody>
-								</table>
+							<div class="dataset">
+								<h4>MRPC</h4>
+
+								<p>The <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52398">Microsoft Research Paraphrase Corpus (MRPC)</a> is composed of sentences pulled from news sources across the internet. Each example contains a pair of sentences that are human-labeled as either semantically equivalent or not. The corpus includes around 6,000 examples.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Sentence 1</th>
+												<th>Sentence 2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>0 (not_equivalent)</td>
+												<td>The identical rovers will act as robotic geologists , searching for evidence of past water .</td>
+												<td>The rovers act as robotic geologists , moving on six wheels .</td>
+											</tr>
+											<tr>
+												<td>1 (equivalent)</td>
+												<td>Spider-Man snatched $ 114.7 million in its debut last year and went on to capture $ 403.7 million .</td>
+												<td>Spider-Man , rated PG-13 , snatched $ 114.7 million in its first weekend and went on to take in $ 403.7 million .</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<p>Citation:</p>
-							<pre><code>
-@inproceedings{dolan2005automatically,
-	title={Automatically constructing a corpus of sentential paraphrases},
-	author={Dolan, William B and Brockett, Chris},
-	booktitle={Proceedings of the Third International Workshop on Paraphrasing (IWP2005)},
-	year={2005}
-}																															
-							</code></pre>
 
 							<!-- QQP -->
-							<h4>QQP</h4>
-							<p>The <a href="https://quoradata.quora.com/First-Quora-Dataset-Release-Question-Pairs">Quora Question Pairs dataset  (QQP)</a> is a collection of roughly 800,000 pairs of questions from the community question-answering website Quora. The task is to determine whether or not a pair of questions are semantically equivalent.</p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Sentence 1</th>
-											<th>Sentence 2</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>0 (not_duplicate)</td>
-											<td>Which is the best (windows) laptop for architects 2016?</td>
-											<td>Which is the best (windows) laptop for architects 2015?</td>
-										</tr>
-										<tr>
-											<td>1 (equivalent)</td>
-											<td>What is the concept behind phase angles in ac circuits?</td>
-											<td>What is phase angle in AC circuit?</td>
-										</tr>
-									</tbody>
-								</table>
+							<div class="dataset">
+								<h4>QQP</h4>
+								<p>The <a href="https://quoradata.quora.com/First-Quora-Dataset-Release-Question-Pairs">Quora Question Pairs dataset  (QQP)</a> is a collection of roughly 800,000 pairs of questions from the community question-answering website Quora. The task is to determine whether or not a pair of questions are semantically equivalent.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Sentence 1</th>
+												<th>Sentence 2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>0 (not_duplicate)</td>
+												<td>Which is the best (windows) laptop for architects 2016?</td>
+												<td>Which is the best (windows) laptop for architects 2015?</td>
+											</tr>
+											<tr>
+												<td>1 (equivalent)</td>
+												<td>What is the concept behind phase angles in ac circuits?</td>
+												<td>What is phase angle in AC circuit?</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<p>Citation:</p>
-							<pre><code>
-@online{WinNT,
-	author = {Iyer, Shankar and Dandekar, Nikhil and Csernai, Kornel},
-	title = {First Quora Dataset Release: Question Pairs},
-	year = 2017,
-	url = {https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs},
-	urldate = {2019-04-03}
-}																																						  
-							</code></pre>
 
 							<!-- SST-B -->
-							<h4>SST-B</h4>
-							<p>The <a href="http://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark">Semantic Textual Similarity Benchmark (SST-B)</a> is a collection of roughly 8,500 sentence pairs drawn from news headlines, video and image captions, and natural language inference data. Each pair is human-annotated with a similarity score from 1 to 5.</p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Sentence 1</th>
-											<th>Sentence 2</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>4.800000190734863</td>
-											<td>A young girl is sitting on Santa's lap.</td>
-											<td>A little girl is sitting on Santa's lap</td>
-										</tr>
-										<tr>
-											<td>2.5999999046325684</td>
-											<td>What is the concept behind phase angles in ac circuits?</td>
-											<td>What is phase angle in AC circuit?</td>
-										</tr>
-									</tbody>
-								</table>
+							<div class="dataset">
+								<h4>SST-B</h4>
+								<p>The <a href="http://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark">Semantic Textual Similarity Benchmark (SST-B)</a> is a collection of roughly 8,500 sentence pairs drawn from news headlines, video and image captions, and natural language inference data. Each pair is human-annotated with a similarity score from 1 to 5.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Sentence 1</th>
+												<th>Sentence 2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>4.800000190734863</td>
+												<td>A young girl is sitting on Santa's lap.</td>
+												<td>A little girl is sitting on Santa's lap</td>
+											</tr>
+											<tr>
+												<td>2.5999999046325684</td>
+												<td>What is the concept behind phase angles in ac circuits?</td>
+												<td>What is phase angle in AC circuit?</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<p>Citation:</p>
-							<pre><code>
-@article{cer2017semeval,
-	title={Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation},
-	author={Cer, Daniel and Diab, Mona and Agirre, Eneko and Lopez-Gazpio, Inigo and Specia, Lucia},
-	journal={arXiv preprint arXiv:1708.00055},
-	year={2017}
-}																																													
-							</code></pre>
-
-							<!-- Inference Tasks -->
-							<h3>Inference Tasks</h3>
 
 							<!-- MNLI -->
-							<h4>MNLI</h4>
-							<p>The <a href="http://www.nyu.edu/projects/bowman/multinli/">Multi-Genre Natural Language Inference Corpus (MNLI)</a> is a crowdsourced collection of sentence pairs with textual entailment annotations. Each example consists of a premise sentence and a hypothesis sentence, along with a label describing weather the premise contradicts or entails the hypothesis, or has no such relation. There are over 400,000 examples in the corpus.</p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Premise</th>
-											<th>Hyopothesis</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1 (neutral)</td>
-											<td>In recognition of these tensions, LSC has worked diligently since 1995 to convey the expectations of the State Planning Initiative and to establish meaningful partnerships with stakeholders aimed at fostering a new symbiosis between the federal provider and recipients of legal services funding.</td>
-											<td>Meaningful partnerships with stakeholders is crucial.</td>
-										</tr>
-										<tr>
-											<td>0 (entailment)</td>
-											<td>The Clinton surrogates also held the high ground in the context war.</td>
-											<td>The Clinton followers kept to the higher ground in the discussion.</td>
-										</tr>
-										<tr>
-											<td>2 (contradiction)</td>
-											<td>Houston is really humid now</td>
-											<td>Houston is freezing and dry right now.</td>
-										</tr>
-									</tbody>
-								</table>
+							<div class="dataset">
+								<h4>MNLI</h4>
+								<p>The <a href="http://www.nyu.edu/projects/bowman/multinli/">Multi-Genre Natural Language Inference Corpus (MNLI)</a> is a crowdsourced collection of sentence pairs with textual entailment annotations. Each example consists of a premise sentence and a hypothesis sentence, along with a label describing weather the premise contradicts or entails the hypothesis, or has no such relation. There are over 400,000 examples in the corpus.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Premise</th>
+												<th>Hyopothesis</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1 (neutral)</td>
+												<td>In recognition of these tensions, LSC has worked diligently since 1995 to convey the expectations of the State Planning Initiative and to establish meaningful partnerships with stakeholders aimed at fostering a new symbiosis between the federal provider and recipients of legal services funding.</td>
+												<td>Meaningful partnerships with stakeholders is crucial.</td>
+											</tr>
+											<tr>
+												<td>0 (entailment)</td>
+												<td>The Clinton surrogates also held the high ground in the context war.</td>
+												<td>The Clinton followers kept to the higher ground in the discussion.</td>
+											</tr>
+											<tr>
+												<td>2 (contradiction)</td>
+												<td>Houston is really humid now</td>
+												<td>Houston is freezing and dry right now.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<p>Citation:</p>
-							<pre><code>
-@article{bowman2015large,
-	title={A large annotated corpus for learning natural language inference},
-	author={Bowman, Samuel R and Angeli, Gabor and Potts, Christopher and Manning, Christopher D},
-	journal={arXiv preprint arXiv:1508.05326},
-	year={2015}
-}																																												
-							</code></pre>
 
 							<!-- QNLI -->
-							<h4>QNLI</h4>
-							<p>The <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset</a> is </p>
-							<p>Example:</p>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Label</th>
-											<th>Sentence 1</th>
-											<th>Sentence 2</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>4.800000190734863</td>
-											<td>A young girl is sitting on Santa's lap.</td>
-											<td>A little girl is sitting on Santa's lap</td>
-										</tr>
-										<tr>
-											<td>2.5999999046325684</td>
-											<td>What is the concept behind phase angles in ac circuits?</td>
-											<td>What is phase angle in AC circuit?</td>
-										</tr>
-									</tbody>
-								</table>
+							<div class="dataset">
+								<h4>QNLI</h4>
+								<p>The <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset</a> is a roughly 115,000 example dataset consisting of questions and answer sentence pairs. Each pair is labeled based on wheather or not the question is in fact answered by the answer sentence. </p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Question</th>
+												<th>Answer</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>0 (entailment)</td>
+												<td>The period of time from 1200 to 1000 BCE is known as what?</td>
+												<td>In the Iron Age</td>
+											</tr>
+											<tr>
+												<td>1 (not_entailment)</td>
+												<td>What percentage of marine life died during the extinction?</td>
+												<td>It is also known as the "Great Dying" because it is considered the largest mass extinction in the Earth's history.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<p>Citation:</p>
-							<pre><code>
-@article{cer2017semeval,
-	title={Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation},
-	author={Cer, Daniel and Diab, Mona and Agirre, Eneko and Lopez-Gazpio, Inigo and Specia, Lucia},
-	journal={arXiv preprint arXiv:1708.00055},
-	year={2017}
-}																																													
-							</code></pre>
 
 							<!-- RTE -->
-							<h4>RTE</h4>
+							<div class="dataset">
+								<h4>RTE</h4>
+								<p>The <a href="https://aclweb.org/aclwiki/Recognizing_Textual_Entailment">Recognizing Textual Entailment (RTE) dataset</a> consists of nearly 6,000 sentence pairs sourced from news sources and wikipedia text. Each pair is labeled by weather or not sentence 1 entails sentence 2.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Sentence 1</th>
+												<th>Sentence 2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1 (not_entailment)</td>
+												<td>After years of study, the Vatican's doctrinal congregation has sent church leaders a confidential document concluding that "sex-change" procedures do not change a person's gender in the eyes of the church.</td>
+												<td>Sex-change operations become more common.</td>
+											</tr>
+											<tr>
+												<td>0 (entailment)</td>
+												<td>The fifth World Social Forum (WSF) has kicked off in Porto Alegre, Rio Grande do Sul state, Brazil.</td>
+												<td>The WSF takes place in Brazil.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 
 							<!-- WNLI -->
-							<h4>WNLI</h4>
-						
-							<a href="../index.html#two" class="button icon solid fa-arrow-left">Continue</a>
+							<div class="dataset">
+								<h4>WNLI</h4>
+								<p>The <a href="https://cs.nyu.edu/faculty/davise/papers/WinogradSchemas/WS.html">Winograd NLI task</a> is a binary classification entailment task based on sentence pairs, like RTE. However, it more specifically tests pronoun understanding as the premise of each example contains an ambiguous pronoun, and the hypothesis replaces that pronoun with one of the possible nouns it may refer to.</p>
+								<p>Example:</p>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Label</th>
+												<th>Premise</th>
+												<th>Hypothesis</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>0 (not_entailment)</td>
+												<td>Carol believed that Rebecca suspected that she had stolen the watch.	</td>
+												<td>Carol believed that Rebecca suspected that Rebecca had stolen the watch.</td>
+											</tr>
+											<tr>
+												<td>1 (entailment)</td>
+												<td>I took the water bottle out of the backpack so that it would be handy.</td>
+												<td>I took the water bottle out of the backpack so that the water bottle would be handy.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<!-- <a href="../index.html#two" class="button icon solid fa-arrow-left">Continue</a> -->
+							<a href="../citations/text.html"  style="margin-left: 20px;" class="button" >Cite Datasets</a>
 						</div>
 					</section>
 
