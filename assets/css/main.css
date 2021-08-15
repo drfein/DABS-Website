@@ -1063,28 +1063,28 @@ input, select, textarea {
 
 		.roundedCorner {
 			height: 26em;
-			border: solid 0.1px #953d75;
-			background-color: #953d75;
-			box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
+			background-color: #5e42a6;
+			/* box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
 			-moz-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
 			-webkit-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
-			-o-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
-			border-radius:25px;
+			-o-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6); */
+			border-radius:12px;
 			flex-direction: column;
 			min-width: 18em;
 			display: block;
+			padding-top: 1px;
 		}
 
 		.dataset {
 			/* background-color: #bf64bc; */
 			/* background-color: rgb(196, 100, 70); */
-			/* background-color: #5e42a6; */
-			background-color: #953d75;
-			box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
+			background-color: #5e42a6;
+			/* background-color: #953d75; */
+			/* box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
 			-moz-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
 			-webkit-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
-			-o-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6);
-			border-radius:25px;
+			-o-box-shadow: 0px 0px 10px  rgba(0,0,0,0.6); */
+			border-radius:12px;
 			display: block;
 			padding: 2em;
 			flex-direction: row;
@@ -1102,7 +1102,7 @@ input, select, textarea {
 
 			.roundedCorner .profilePic {
 				border-radius: 50%;
-				border: solid 5px #b74e91;
+				/* border: solid 5px; */
 				margin-left: auto;
 				margin-right: auto;
 				margin-top: 2em;
@@ -1900,10 +1900,10 @@ input, select, textarea {
 		font-size: 0.8em;
 		font-weight: bold;
 		height: calc(4.75em + 2px);
-		letter-spacing: 0.25em;
+		letter-spacing: 0.2em;
 		line-height: 4.75em;
 		outline: 0;
-		padding: 0 3.75em;
+		padding: 0 3.25em;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
