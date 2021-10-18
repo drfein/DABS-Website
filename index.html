@@ -26,6 +26,7 @@
 
 		gtag('config', 'G-ERC7L4HM6Y');
 		</script>
+
 	</head>
 	<body class="is-preload">
 
@@ -50,9 +51,9 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>DABS</h1>
-							<p class="header">The <strong>D</strong>omain <strong>A</strong>gnostic <strong>B</strong>enchmark for <strong>S</strong>elf-supervised learning.</p>
+							<p class="header">The <strong>D</strong>omain <strong>A</strong>gnostic <strong>B</strong>enchmark for <strong>S</strong>elf-Supervised Learning.</p>
 							<hr class="major">
-							<p class="small" >In recent years, the advent of self-supervised learning (SSL) has driven substantial progress in the field of artificial intelligence. By extracting meaningful features from unlabeled data, SSL algorithms grant models access to the troves of information produced by modern society. Unfortunately, existing algorithms are specific to individual domains (BERT for natural language processing, SimCLR for computer vision, etc.). This greatly reduces the impact and reach of SSL, as each domain requires attention from the research community to develop a tailor-made solution. To encourage research of domain-agnostic SSL models that function out-of-the box on a variety of problems, we present DABS, the domain-agnostic benchmark for self supervised learning. </p>
+							<p class="small" >How can we learn from unlabeled data in any modality or domain? DABS measures how well self-supervised learning algorithms can learn representations from unlabeled data that transfer to labeled tasks in the same domain. Algorithms must be general enough to work on common pretraining domains like text and natural images as well as less-common settings such as wearable sensors and medical imaging. DABS is a living benchmark, and future domains in other scientific and real-world settings will be introduced to test the generality of proposed methods! </p>
 							<ul class="actions">
 								</li><li><a href="#one" class="button">Read the Paper</a></li>
 								<li><a href="https://github.com/alextamkin/domain_agnostic_benchmark" class="button">See the Code</a></li>
@@ -68,8 +69,8 @@
 							<a class="image"><img src="images/Pic01.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Embedding</h2>
-									<p>First, data from pretraining datasets are embedded into vectors of uniform shape in order to allow for a domain-agnostic model architecture that does not depend on the shape of the data within each domain. We encourage the use of our provided embedding module, but participants may also create their own.</p>
+									<h2>Architecture</h2>
+									<p>A domain-agnostic SSL algorithm needs to be capable of processing arbitrary kinds of data. The DABS baselines use a transformer architecture that operates on embeddings produced by patchifying or tokenizing inputs. However, other approaches (e.g. Perceivers) which operate on raw bytes are also welcomed.</p>
 									<ul class="actions">
 									</ul>
 								</div>
@@ -79,8 +80,8 @@
 							<a class="image"><img src="images/Pic02.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Pretraining</h2>
-									<p>Participants have agency over the pretraining objective they choose, and the entire architecture of their model. The goal is to use pretraining datasets to condition a model that is performant accross transfer datasets within a domain, and ultimately to create an architecture and pretraining objective that is performant in this way accross all six domains.</p>
+									<h2>Pretraining Objective</h2>
+									<p>A pretraining objective mathematically specifies how models learn from unlabeled data. The same objective needs to learn useful representations for inputs as diverse as high-resolution images, text, and wearable signals data, as well as other real-world domains.</p>
 									<ul class="actions">
 									
 									</ul>
@@ -91,8 +92,8 @@
 							<a class="image"><img src="images/Pic03.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Transfer Learning</h2>
-									<p>In the adaptation layer, the model is given labeled data in the same domain as the pretraining data, but possibly from a different dataset and with a different end task. A linear classifier is provided as the adaptation layer in our baseline model, but participants may choose their own adaptation method so long as it is in the spirit of the benchmark.</p>
+									<h2>Adaptation</h2>
+									<p>After a model is pretrained, it should perform well on labeled tasks within a domain. We evaluate our baseline methods with linear classifiers, but encourage participants to explore finetuning or other general adaptation methods (e.g. lightweight finetuning) as long as fair comparisons are provided to previous methods.</p>
 									<ul class="actions">
 										<!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
 									</ul>
@@ -102,61 +103,52 @@
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
+
+				<!-- Desktop Version -->
+					<section id="two" class="wrapper style3 fade-up visibledesktop">
 						<div class="inner">
 							<h2>Domains</h2>
-							<p>We use six domains in order to capture performance over both traditional ML tasks that have extensive research communities (e.g. computer vision and NLP) and less studied/emerging focal point of the field (e.g. sensor and x-ray data). More information about selection criteria and specific datasets can be found in the DABS paper.</p>
+							<p>DABS is organized around seven <em>domains</em>, which are kinds of data that a self-supervised model might be trained on. Future installments of DABS will include other domains to evaluate the real-world generalizability of proposed algorithms. More information about selection criteria and specific datasets can be found in the DABS paper.</p>
 							<p>Select a domain to view more information about the datasets used.</p>
 							<div class="features">
 								<section class="domain" data-link="/domains/images.html">
-									<span class="icon solid major fa-image"></span>
-									<h3>Natural Images</h3>
-									<p>Pretraining is done on the ImageNet dataset, and then transfer tasks cover a wide variety of natural image classification tasks.</p>
-									<span><em>Press to learn more</em></span>
+									<i style="margin-left: 20%; margin-top: -0.8em;" class="icon solid major fa-image fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 3.2em; font-size: 2em; color: rgba(255, 255, 255, 1);">Natural Images</h1>
 								</section>
+
 								<section class="domain" data-link="/domains/speech.html">
-									<span class="icon solid major fa-comments"></span>
-									<h3>Speech Recordings</h3>
-									<p>Pretraining is done on the Librispeech corpus, a large dataset of English speech recordings. Downstream tasks cover everything from speaker recognition to utterance classification.</p>
-									<span><em>Press to learn more</em></span>
+									<i style="margin-left: 20%; margin-top: -1.5em;" class="icon solid major fa-comments fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 2.5em;font-size: 2em; color: rgba(255, 255, 255, 1);">Speech Recordings</h1>
 								</section>
+
 								<section class="domain" data-link="/domains/text.html">
-										<span class="icon solid major fa-font"></span>
-										<h3>Text</h3>
-										<p>Natural Language Processing has among the largest machine learning communities. By including coverage of this domain, which is structurally different from the other domains, we hope to discover more powerful algorithms.</p>
-										<span><em>Press to learn more</em></span>
-									</section>
+									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon solid major fa-font fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">English-Language Text</h1>
+								</section>
 								<section class="domain" data-link="/domains/sensor.html">
-									<span class="icon solid major fa-running"></span>
-									<h3>Sensor</h3>
-									<p>Pretraining and transfer tasks are both derived from the PAMAP-2 dataset, a dataset consisting of readings from many body sensors over time, and labels describing the task the monitered people were doing at the time of measurement.</p>
-									<span><em>Press to learn more</em></span>
+									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon solid major fa-running fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">Wearable Sensors</h1>
 								</section>
 								<section class="domain" data-link="/domains/x-ray.html">
-									<span class="icon solid major fa-x-ray"></span>
-									<h3>Chest X-ray</h3>
-									<p> For both pretraining and transfer tasks, we use the CheXpert dataset, which contain chest X-rays labeled with the particular conditions identafiable in each by human pathologists.</p>
-									<span><em>Press to learn more</em></span>
+									<i style="margin-left: 20%; margin-top: -0.8em;" class="icon solid major fa-x-ray fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 3.2em;font-size: 2em; color: rgba(255, 255, 255, 1);">Chest X-Rays</h1>
 								</section>
 								<section class="domain" data-link="/domains/paired.html">
-									<span class="icon major fa-file-image"></span>
-									<h3>Images with paired Text captions</h3>
-									<p>To attain coverage of multimodal domains, we include captioned images. Pretraining is done on the COCO dataset, with downstream transfer performance assessed by the Visual Question Answering task.</p>
-									<span><em>Press to learn more</em></span>
+									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon major fa-file-image fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">Paired Image and Text</h1>
 								</section>
 								<section class="domain" data-link="/domains/languages.html">
-									<span class="icon solid major fa-language"></span>
-									<h3>Multi-language Text</h3>
-									<p>In order to encourage the production of models that function accross cultural lines, we use the multilingual mC4 dataset for pretraining in the text domain, and the PAWS-X multilingual paraphrase detection tasks for transfer tasks.</p>
-									<span><em>Press to learn more</em></span>
+									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon solid major fa-language fa-2x"></i>
+									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">Multilingual Text</h1>
 								</section>
 								<section class="visibledesktop" class="domain" style="text-align: center;" data-link="#one">
-									<h1 style="margin-right: 1em; margin-top: 0.5em;font-size: 5em; color: rgba(255, 255, 255, 0.35);">DABS</h1>
+									<h1 style="margin-right: 1em; margin-top: 0.2em;font-size: 5em; color: rgba(255, 255, 255, 0.35);">DABS</h1>
 								</section>
 							</div>
-							<p>For information about dataset usage, and data origins, please see the appendix of the <a>DABS paper.</a></p>
+							<p>For information about dataset licenses, data collection, and consent please see the appendix of the DABS paper.</p>
 						</div>
 					</section>
+
 					<script type="text/javascript">
 						$(document).ready(function() {
 							$(".domain").click(function() {
@@ -165,12 +157,56 @@
 						});
 					</script>
 
+					<!-- Mobile -->
+					<!-- Desktop Version -->
+					<section id="two" class="wrapper style3 fade-up visibledevice">
+						<div class="inner">
+							<h2>Domains</h2>
+							<p>DABS is organized around seven <em>domains</em>, which are kinds of data that a self-supervised model might be trained on. Future installments of DABS will include other domains to evaluate the real-world generalizability of proposed algorithms. More information about selection criteria and specific datasets can be found in the DABS paper.</p>
+							<p>Select a domain to view more information about the datasets used.</p>
+							<div class="features">
+								<section class="domain" data-link="/domains/images.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-image fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Natural Images</span>
+								</section>
+
+								<section class="domain" data-link="/domains/speech.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-comments fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Speech Recordings</span>
+								</section>
+
+								<section class="domain" data-link="/domains/text.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-font fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">English-Language Text</span>
+								</section>
+								<section class="domain" data-link="/domains/sensor.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-running fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Wearable Sensors</span>
+								</section>
+								<section class="domain" data-link="/domains/x-ray.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-x-ray fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Chest X-Rays</span>
+								</section>
+								<section class="domain" data-link="/domains/paired.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon major fa-file-image fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Paired Image and Text</span>
+								</section>
+								<section class="domain" data-link="/domains/languages.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-language fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Multilingual Text</span>
+								</section>
+							</div>
+							<p>For information about dataset licenses, data collection, and consent please see the appendix of the DABS paper.</p>
+						</div>
+					</section>
+
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Using DABS?</h2>
 							<p>We appreciate your desire to contribute or build on DABS! We only ask that you cite our paper when doing so. You may use the bibtex snippet below to cite our work.</p> 
 							<br>
+							<h3>BibTeX Citation:</h3>
 							<pre><code>
 @techreport{WahCUB_200_2011,
 	Title = {{The Caltech-UCSD Birds-200-2011 Dataset}},
