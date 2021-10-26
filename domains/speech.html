@@ -36,12 +36,30 @@
 						<div class="inner">
 							<h1 class="major">Speech Recordings</h1>
 							<p>A well-studied avenue of machine learning involves extracting text from sound recordoings. By including this domain, and preprocessing recordings as log-mel spectrograms, we increase the coverage of DABS in terms of unique data structures while simultaneously engaging a large ML community.</p>
-							<span class="image fit"><img src="../images/domains/lorem_ipsum.png" alt="" /></span>
+							<span class="image fit"><img src="../images/domains/speech.png" alt="" /></span>
 							<h2>Pretraining</h2> 
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint at provident quasi omnis possimus cupiditate distinctio fuga eius tempora dolore id assumenda ea minus totam ducimus, impedit pariatur et quo.</p>
+							<div class="dataset">
+								<h4>LibriSpeech</h4> 
+								<p>The <a href=”http://www.openslr.org/12”>LibriSpeech</a> dataset contains approximately 1000 hours of read English speech derived from readings of audiobooks from the Librivox project. The data has been carefully segmented and aligned with a sampling rate of 16 kHz. Each example provides the audiofile as well as text transcription of the speech.</p>
+							</div>
 							<h2>Transfer</h2>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint at provident quasi omnis possimus cupiditate distinctio fuga eius tempora dolore id assumenda ea minus totam ducimus, impedit pariatur et quo.</p>
-							<a href="../index.html#two" class="button icon solid fa-arrow-left">Continue</a>
+							<div class="dataset">
+								<h4>VoxCeleb</h4>
+								<p>The <a href=”http://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox1.html”>VoxCeleb</a> dataset includes over 150K speech samples from over 1,251 speakers. It is used for speaker identification. Each sample contains the audiofile as well as speaker label and youtube-id. Manual download of the dataset is required.</p>
+							</div>
+							<div class="dataset">
+								<h4>AudioMNIST</h4>
+								<p>The <a href=”https://github.com/Jakobovski/free-spoken-digit-dataset”>AudioMNIST</a> spoken digit dataset contains 2500 recordings of 5 speakers using English pronunciations of digits (50 samples of each digit per speaker). The recordings are in wav files at 8kHz and are trimmed to minimize silence at the beginning and end. Each sample contains the audiofile, a label indicating the digit spoken, and the audiofile name.</p>
+							</div>
+							<div class="dataset">
+								<h4>Speech Commands</h4>
+								<p>The <a href=”https://arxiv.org/abs/1804.03209”>Speech Commands</a> dataset is intended for simple key word detection useful in building basic voice interfaces for applications. It was created using samples contributed from thousands of different people and contains 65,000 one second utterances of 30 short words (e.g. yes, no, up, down, on, off). Unknown utterances not identifiable as any of the keywords, and files of background noise, are also included. Each sample contains the audiofile and label.</p>
+							</div>
+							<div class="dataset">
+								<h4>Fluent Speech Commands</h4>
+								<p>The <a href=”https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/”>Fluent Speech Commands</a> dataset was created with the goal of providing a benchmark for end-to-end spoken language understanding (SLU) models.  The data were gathered via crowdsourcing and include 30,043 utterances from 97 speakers. Each utterance is a phrase commonly used to control smart home devices or virtual assistants. Utterances are recorded as single channel 16 KHz wav files. Each utterance is labeled with action, object, and location values. The combination of these values yields the intent of each utterance. This allows for alternative phrasings (e.g. “turn the lights on,” “switch on the lights”) yielding the same intent. The dataset contains 248 phrasings mapped to 31 unique intents. The dataset is organized into directories containing the path to the .wav file, an anonymized alphanumeric code for the speaker of this audio, the prompt that the speaker was asked to read, (action) one of 'change language', 'activate', 'deactivate', 'increase', 'decrease', 'bring', (object) one of 'none', 'music', 'lights', 'volume', 'heat', 'lamp', 'newspaper', 'juice', 'socks', 'shoes', 'Chinese', 'Korean', 'English', 'German', and (location) one of 'none', 'kitchen', 'bedroom', 'washroom’. Demographic information on the speakers is also included in the dataset.</p>
+							</div>
+							<a href="../citations/speech.html"  style="margin-left: 20px;" class="button" >Cite Datasets</a>
 						</div>
 					</section>
 
