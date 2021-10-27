@@ -55,8 +55,8 @@
 							<hr class="major">
 							
 							<p class="small" >How can we learn from unlabeled data in any modality or domain? DABS measures how well self-supervised learning algorithms can learn representations from unlabeled data that transfer to labeled tasks in the same domain. Algorithms must be general enough to work on common pretraining domains like text and natural images as well as less-common settings such as wearable sensors and medical imaging. DABS is a living benchmark, and future domains in other scientific and real-world settings will be introduced to test the generality of proposed methods! </p>
-							<ul class="actions">
-								</li><li><a href="#one" class="button">Read the Paper</a></li>
+							<ul class="actions">	
+								</li><a href="#one" class="button">Read the Paper</a></li>
 								<li><a href="https://github.com/alextamkin/domain_agnostic_benchmark" class="button">See the Code</a></li>
 								<li><a href="team.html" class="button">Meet the Team</a></li>
 								<li><a href="https://dabsleaderboard.netlify.app/" class="button">Leaderboard</a></li>
@@ -96,7 +96,6 @@
 									<h2>Adaptation</h2>
 									<p>After a model is pretrained, it should perform well on labeled tasks within a domain. We evaluate our baseline methods with linear classifiers, but encourage participants to explore finetuning or other general adaptation methods (e.g. lightweight finetuning) as long as fair comparisons are provided to previous methods.</p>
 									<ul class="actions">
-										<!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
 									</ul>
 								</div>
 							</div>
@@ -104,51 +103,6 @@
 					</section>
 
 				<!-- Two -->
-
-				<!-- Desktop Version -->
-					<section id="two" class="wrapper style3 fade-up visibledesktop">
-						<div class="inner">
-							<h2>Domains</h2>
-							<p>DABS is organized around seven <em>domains</em>, which are kinds of data that a self-supervised model might be trained on. Future installments of DABS will include other domains to evaluate the real-world generalizability of proposed algorithms. More information about selection criteria and specific datasets can be found in the DABS paper.</p>
-							<p>Select a domain to view more information about the datasets used.</p>
-							<div class="features">
-								<section style="white-space: nowrap;" class="domain" data-link="/domains/images.html">
-									<i style="margin-left: 20%; margin-top: -0.8em;" class="icon solid major fa-image fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 3.2em; font-size: 2em; color: rgba(255, 255, 255, 1);">Natural Images</h1>
-								</section>
-
-								<section class="domain" data-link="/domains/speech.html">
-									<i style="margin-left: 20%; margin-top: -1.5em;;" class="icon solid major fa-comments fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 2.5em;font-size: 2em; color: rgba(255, 255, 255, 1);">Speech <br> Recordings</h1>
-								</section>
-
-								<section style="white-space: nowrap;" class="domain" data-link="/domains/text.html">
-									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon solid major fa-font fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">English-<br>Language Text</h1>
-								</section>
-								<section style="white-space: nowrap;" class="domain" data-link="/domains/sensor.html">
-									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon solid major fa-running fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">Wearable<br> Sensors</h1>
-								</section>
-								<section style="white-space: nowrap;" class="domain" data-link="/domains/x-ray.html">
-									<i style="margin-left: 20%; margin-top: -0.8em;" class="icon solid major fa-x-ray fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 3.2em;font-size: 2em; color: rgba(255, 255, 255, 1);">Chest X-Rays</h1>
-								</section>
-								<section style="white-space: nowrap;" class="domain" data-link="/domains/paired.html">
-									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon major fa-file-image fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">Paired Image<br> and Text</h1>
-								</section>
-								<section  style="white-space: nowrap;" class="domain" data-link="/domains/languages.html">
-									<i style="margin-left: 20%; margin-top: -1.3em;" class="icon solid major fa-language fa-2x"></i>
-									<h1 style="margin-right: 2em; margin-top: 2.7em;font-size: 2em; color: rgba(255, 255, 255, 1);">Multilingual<br> Text</h1>
-								</section>
-								<section class="visibledesktop" class="domain" style="text-align: center;" data-link="#one">
-									<h1 style="margin-right: 1em; margin-top: 0.2em;font-size: 5em; color: rgba(255, 255, 255, 0.35);">DABS</h1>
-								</section>
-							</div>
-							<p>For information about dataset licenses, data collection, and consent please see the appendix of the DABS paper.</p>
-						</div>
-					</section>
 
 					<script type="text/javascript">
 						$(document).ready(function() {
@@ -158,40 +112,41 @@
 						});
 					</script>
 
-					<!-- Mobile -->
-					<section id="two" class="wrapper style3 fade-up visibledevice">
+					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Domains</h2>
 							<p>DABS is organized around seven <em>domains</em>, which are kinds of data that a self-supervised model might be trained on. Future installments of DABS will include other domains to evaluate the real-world generalizability of proposed algorithms. More information about selection criteria and specific datasets can be found in the DABS paper.</p>
 							<p>Select a domain to view more information about the datasets used.</p>
 							<div class="features">
-								<section class="domain" data-link="/domains/images.html">
-									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-image fa-lg"></i>
-									<span style="display: inline-block; font-weight: bold; margin-top: -4em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Natural Images</span>
-								</section>
 
-								<section class="domain" data-link="/domains/speech.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/speech.html">
+									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-image fa-lg"></i>
+									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Natural Images</span>
+								</section>
+								<br>
+
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/speech.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-comments fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Speech Recordings</span>
 								</section>
 
-								<section class="domain" data-link="/domains/text.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/text.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-font fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">English-Language Text</span>
 								</section>
-								<section class="domain" data-link="/domains/sensor.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/sensor.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-running fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Wearable Sensors</span>
 								</section>
-								<section class="domain" data-link="/domains/x-ray.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/x-ray.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-x-ray fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Chest X-Rays</span>
 								</section>
-								<section class="domain" data-link="/domains/paired.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/paired.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon major fa-file-image fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Paired Image and Text</span>
 								</section>
-								<section class="domain" data-link="/domains/languages.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/languages.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-language fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Multilingual Text</span>
 								</section>
