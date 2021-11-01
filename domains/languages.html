@@ -34,13 +34,12 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Multilingual Text</h1>
-							<p>To prove the generality of domain agnostic algorithms accross languages, we include the multilingual text domain. Find dataset licenses in our paper. For the bibtex citations of these datasets, click <a href="../citations/languages.html">here</a>.</p></p>
 							<span class="image fit"><img src="../images/domains/globe.png" alt="" /></span>
+							<h1 class="major">Multilingual Text</h1>
 							<h2>Pretraining</h2> 
 							<div class="dataset">
 								<h4>mC4 Dataset</h4>
-								<p>We use a subset of the large <a href="https://arxiv.org/abs/1609.07843">mC4 dataset</a> (English, French, German, Spanish, Chinese, Japanese, and Korean). This is a clean version of <a href="https://commoncrawl.org">Common Crawl's web crawl corpus</a>. Each of the 108 languages provided contains examples including the text of a web-page along with the source url.</p>
+								<p>We use a subset of the large <a href="https://arxiv.org/abs/1609.07843">mC4 dataset</a> (English, French, German, Spanish, Chinese, Japanese, and Korean). This is a cleaned version of <a href="https://commoncrawl.org">Common Crawl's web crawl corpus</a>.</p>
 								<p>Example from the English dataset:</p>
 <pre><code>{'timestamp': '2018-06-24T01:32:39Z',
 'text': 'Farm Resources in Plumas County\nShow Beginning Farmer Organizations & Professionals (304)\nThere are 304 resources serving Plumas County in the following categories:\nMap of Beginning Farmer Organizations & Professionals serving Plumas County\nVictoria Fisher - Office Manager - Loyalton, CA\nAmy Lynn Rasband - UCCE Plumas-Sierra Administrative Assistant II - Quincy , CA\nShow Farm Income Opportunities Organizations & Professionals (353)\nThere are 353 resources serving Plumas County in the following categories:\nFarm Ranch And Forest Retailers (18)\nMap of Farm Income Opportunities Organizations & Professionals serving Plumas County\nWarner Valley Wildlife Area - Plumas County\nShow Farm Resources Organizations & Professionals (297)\nThere are 297 resources serving Plumas County in the following categories:\nMap of Farm Resources Organizations & Professionals serving Plumas County\nThere are 57 resources serving Plumas County in the following categories:\nMap of Organic Certification Organizations & Professionals serving Plumas County',
@@ -48,9 +47,10 @@
 								</div>
 
 							<h2>Transfer</h2>
-							<p>We use the PAWS-X datasets to finetune and asses the multilingual language-understanding capacity of DABS models. These include paraphrase identification tasks in 7 distinct languages (French, Spanish, German, Chinese, Japanese, and Korean).</p>
+							<p>We use the PAWS-X datasets to finetune and assess the pretrained multilingual models. These include paraphrase identification tasks in 7 distinct languages (French, Spanish, German, Chinese, Japanese, and Korean).</p>
 							<div class="dataset">
-								<p>The original Paraphrase Adversaries from Word Scrambling (PAWS) dataset consists of English sentence pairs curated from Wikipedia and Quora. <a href="https://arxiv.org/abs/1908.11828">The PAWS-X dataset</a> used here translates the PAWS dataset into the languages listed above. This makes for a total of roughly 50,000 examples accross each of the 7 languages.</p>
+								<h4>PAWS-X</h4>
+								<p>The original Paraphrase Adversaries from Word Scrambling (PAWS) dataset consists of English sentence pairs curated from Wikipedia and Quora. <a href="https://arxiv.org/abs/1908.11828">The PAWS-X dataset</a> contains translations of the PAWS dataset into the languages listed above. This makes for a total of roughly 50,000 examples across each of the 7 languages.</p>
 								<p>Example from the English dataset:</p>
 								<table class="alt">
 									<thead>

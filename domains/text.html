@@ -34,9 +34,8 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">English-Language Text</h1>
-							<p>The discrete nature of text makes it markedly different from the other domains studied. This adds significant coverage to the benchmark. Find dataset licenses in the paper. For the bibtex citations of these datasets, click <a href="../citations/text.html">here</a>.</p>
 							<span class="image fit"><img src="../images/domains/lorem_ipsum.png" alt="" /></span>
+							<h1 class="major">English-Language Text</h1>
 							<!-- Pretraining -->
 
 							<h2>Pretraining</h2> 
@@ -57,13 +56,13 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 							<!-- Transfer -->
 
 							<h2>Transfer</h2>
-							<p>We use the popular <a href="https://gluebenchmark.com/">GLUE benchmark</a> to assess performance across a variety of NLP tasks including single-sentence tasks, similarity and paraphrase tasks, and inference tasks.</p>
+							<p>We use the <a href="https://gluebenchmark.com/">GLUE benchmark</a> to assess performance across a variety of NLP tasks.</p>
 
 							<!-- CoLA -->
 
 								<div class="dataset">
 									<h4>CoLA</h4>
-									<p>The <a href="https://nyu-mll.github.io/CoLA/">Corpus of Linguistic Acceptability (CoLA)</a> consists of over 10,000 examples of single-sentences labeled by whether or not they are grammatically acceptable English sentences. This is presented as a binary classification task.</p>
+									<p>The <a href="https://nyu-mll.github.io/CoLA/">Corpus of Linguistic Acceptability (CoLA)</a> consists of over 10,000 examples of sentences, where the task is to predict whether each is classified as a grammatically acceptable English sentence.</p>
 									<div class="table-wrapper">
 										<table class="alt">
 											<thead>
@@ -91,7 +90,7 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 								<div class="dataset">
 								<h4>SST2</h4>
 
-								<p>The <a href="https://nlp.stanford.edu/sentiment/">Stanford Sentiment Treebank dataset (SST2) dataset</a> consists of roughly 70,000 examples. Each example contains a sentence taken from a movie review as well as a human-annotated sentiment (negative or positive). This task also is also presented as a binary classification task.</p>
+								<p>The <a href="https://nlp.stanford.edu/sentiment/">Stanford Sentiment Treebank dataset (SST2) dataset</a> consists of roughly 70,000 examples. Each example contains a sentence taken from a movie review as well as a human-annotated sentiment (negative or positive).</p>
 								<div class="table-wrapper">
 									<table class="alt">
 										<thead>
@@ -119,7 +118,7 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 							<div class="dataset">
 								<h4>MRPC</h4>
 
-								<p>The <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52398">Microsoft Research Paraphrase Corpus (MRPC)</a> is composed of sentences pulled from news sources across the internet. Each example contains a pair of sentences that are human-labeled as either semantically equivalent or not. The corpus includes around 6,000 examples.</p>
+								<p>The <a href="https://www.microsoft.com/en-us/download/details.aspx?id=52398">Microsoft Research Paraphrase Corpus (MRPC)</a> is composed of sentences pulled from news sources across the internet. Each example contains a pair of sentences that are human-labeled as semantically equivalent or not. The corpus includes around 6,000 examples.</p>
 								<div class="table-wrapper">
 									<table class="alt">
 										<thead>
@@ -206,7 +205,7 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 							<!-- MNLI -->
 							<div class="dataset">
 								<h4>MNLI</h4>
-								<p>The <a href="http://www.nyu.edu/projects/bowman/multinli/">Multi-Genre Natural Language Inference Corpus (MNLI)</a> is a crowdsourced collection of sentence pairs with textual entailment annotations. Each example consists of a premise sentence and a hypothesis sentence, along with a label describing weather the premise contradicts or entails the hypothesis, or has no such relation. There are over 400,000 examples in the corpus.</p>
+								<p>The <a href="http://www.nyu.edu/projects/bowman/multinli/">Multi-Genre Natural Language Inference Corpus (MNLI)</a> is a crowdsourced collection of sentence pairs with textual entailment annotations. Each example consists of a premise sentence and a hypothesis sentence, along with a label describing whether the premise contradicts or entails the hypothesis, or has no such relation. There are over 400,000 examples in the corpus.</p>
 								<div class="table-wrapper">
 									<table class="alt">
 										<thead>
@@ -240,7 +239,7 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 							<!-- QNLI -->
 							<div class="dataset">
 								<h4>QNLI</h4>
-								<p>The <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset</a> is a roughly 115,000 example dataset consisting of questions and answer sentence pairs. Each pair is labeled based on wheather or not the question is in fact answered by the answer sentence. </p>
+								<p>The <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset</a> is a roughly 115,000 example dataset consisting of questions and answer sentence pairs. The QNLI task is automatically derived from SQuAD, and consists of sentence-question pairs, where the task is to predict whether the sentence contains the answer to the question.</p>
 								<div class="table-wrapper">
 									<table class="alt">
 										<thead>
@@ -269,7 +268,7 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 							<!-- RTE -->
 							<div class="dataset">
 								<h4>RTE</h4>
-								<p>The <a href="https://aclweb.org/aclwiki/Recognizing_Textual_Entailment">Recognizing Textual Entailment (RTE) dataset</a> consists of nearly 6,000 sentence pairs sourced from news sources and wikipedia text. Each pair is labeled by weather or not sentence 1 entails sentence 2.</p>
+								<p>The <a href="https://aclweb.org/aclwiki/Recognizing_Textual_Entailment">Recognizing Textual Entailment (RTE) dataset</a> consists of nearly 6,000 sentence pairs sourced from news sources and Wikipedia text. Each pair is labeled by weather or not sentence 1 entails sentence 2.</p>
 								<div class="table-wrapper">
 									<table class="alt">
 										<thead>
@@ -298,7 +297,7 @@ Initial reviews were laudatory . Reviewers were satisfied with the smaller Super
 							<!-- WNLI -->
 							<div class="dataset">
 								<h4>WNLI</h4>
-								<p>The <a href="https://cs.nyu.edu/faculty/davise/papers/WinogradSchemas/WS.html">Winograd NLI task</a> is a binary classification entailment task based on sentence pairs, like RTE. However, it more specifically tests pronoun understanding as the premise of each example contains an ambiguous pronoun, and the hypothesis replaces that pronoun with one of the possible nouns it may refer to.</p>
+								<p>The<a href="https://cs.nyu.edu/faculty/davise/papers/WinogradSchemas/WS.html"> Winograd NLI task</a> is a binary classification entailment task based on sentence pairs, like RTE. The premise of each example contains an ambiguous pronoun, and the hypothesis replaces that pronoun with one of the possible nouns it may refer to.</p>
 								<div class="table-wrapper">
 									<table class="alt">
 										<thead>

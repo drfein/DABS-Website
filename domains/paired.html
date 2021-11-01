@@ -34,18 +34,21 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
+							<span class="image fit"><img src="../images/domains/paired.png" alt="" /></span>
 							<h1 class="major">Paired Image and Text</h1>
-							<p>Multi-modal tasks represent a rapidly growing and useful area of machine learning. By including the captioned image task, we hope to encourage the development of models that can perform well accross data structures.</p>
-							<span class="image fit"><img src="../images/domains/lorem_ipsum.png" alt="" /></span>
 							<h2>Pretraining</h2> 
 							<div class="dataset">
 								<h4>MSCOCO</h4>
-								<p>The <a href="https://cocodataset.org/" >MSCOCO</a> (Microsoft Common Objects in Context) dataset consists of over 300K images and captions. Images are split into training, validation, and test sets. The dataset has annotations for object detection (bounding boxes and per-instance segmentation masks with 80 object categories), captioning (natural language descriptions of the images), keypoints detection (17 possible keypoints, such as left eye, nose), stuff image segmentation (per-pixel segmentation masks with 91 stuff categories, such as grass, wall, sky), panoptic (full scene segmentation, with 80 thing categories and a subset of 91 stuff categories),  and DensePose annotations. Training and validation images have publicly available annotations. Over 100K unannotated images are also included. </p>
+								<p>The <a href=”https://cocodataset.org/” >MSCOCO</a> (Microsoft Common Objects in Context) dataset consists of over 300K images and captions. The dataset contains a wide range of natural images, as well as accompanying natural language descriptions of those images.</p>
 							</div>
 							<h2>Transfer</h2>
 							<div class="dataset">
+								<h4>MSCOCO-Matching</h4>
+								<p>The MSCOCO-Matching task uses the <a href="https://cocodataset.org/" >MSCOCO</a> dataset. The image for a given image-caption pair is replaced for 50% of the examples and the task is to predict whether the image and caption are correctly matched.</p>
+							</div>
+							<div class="dataset">
 								<h4>VQA</h4>
-								<p>The <a href="https://visualqa.org/download.html" >VQA</a> dataset consists of over 200K images along with open-ended questions and answers. Commonsense knowledge as well as an understanding of vision and language are required to answer the questions. The images are of Common Objects in Context (COCO) and abstract scenes. The database contains an average of 5.4 questions per image (minimum of 3). For each question, 10 ground truth answers and 3 plausible (but likely incorrect) answers are included. The database also has an automatic evaluation metric.</p>
+								<p>The <a href="https://visualqa.org/download.html" >VQA</a> dataset consists of over 200K images along with open-ended questions and answers. Commonsense knowledge as well as an understanding of vision and language are required to answer the questions. The images are derived from the Common Objects in Context (COCO) dataset. We convert VQA into a binary classification task where the task is to predict whether the given question and answer are aligned with the provided image. Incorrect answers are chosen from a provided set of plausible answers.</p>
 							</div>
 							<a href="../citations/paired.html"  style="margin-left: 20px;" class="button" >Cite Datasets</a>
 						</div>

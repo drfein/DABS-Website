@@ -34,9 +34,8 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Chest X-Rays</h1>
-							<p>While similar in principle to natural image processing, these images often have more subtle differences than natural images. Further, the potential social impact of models that can classify X-Ray Images with success speaks for itself.</p>
 							<span class="image fit"><img src="../images/domains/chest.png" alt="" /></span>
+							<h1 class="major">Chest X-Rays</h1>
 							<h2>Pretraining</h2> 
 							<div class="dataset">
 								<h4>CheXpert</h4>
@@ -44,8 +43,12 @@
 							</div>
 							<h2>Transfer</h2>
 							<div class="dataset">
+								<h4>CheXpert</h4>
+								<p>For transfer, we consider the CheXpert "competition tasks" of detecting cardiomegaly, atelectasis, consolidation, edema, and pleural effusion.</p>
+							</div>
+							<div class="dataset">
 								<h4>X-ray 8</h4>
-								<p>The <a href=”https://nihcc.app.box.com/v/ChestXray-NIHCC” >X-ray 8</a> dataset contains over 100K frontal-view chest x-ray images from over 30K patients, including many with advanced disease. Using text-mining, eight disease image labels were taken from the associated radiological reports. Each image can have multiple labels. </p>
+								<p>The <a href=”https://nihcc.app.box.com/v/ChestXray-NIHCC” >X-ray 8</a>dataset contains over 100K frontal-view chest x-ray images from over 30K patients, including many with advanced disease. Using text-mining, eight disease image labels were taken from the associated radiological reports: Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Nodule, Pneumonia and Pneumothorax. Each image can have multiple labels.</p>
 							</div>
 							<a href="../citations/x-ray.html"  style="margin-left: 20px;" class="button" >Cite Datasets</a>
 						</div>

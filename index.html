@@ -54,7 +54,14 @@
 							<p class="header">The <strong>D</strong>omain <strong>A</strong>gnostic <strong>B</strong>enchmark for <strong>S</strong>elf-Supervised Learning.</p>
 							<hr class="major">
 							
-							<p class="small" >How can we learn from unlabeled data in any modality or domain? DABS measures how well self-supervised learning algorithms can learn representations from unlabeled data that transfer to labeled tasks in the same domain. Algorithms must be general enough to work on common pretraining domains like text and natural images as well as less-common settings such as wearable sensors and medical imaging. DABS is a living benchmark, and future domains in other scientific and real-world settings will be introduced to test the generality of proposed methods! </p>
+							<p class="small" >Can we learn from unlabeled data in any modality or domain? 
+								<br>
+								<br>
+								DABS measures the performance of <em>general</em> self-supervised learning algorithms that aren't tied to a particular domain. 
+								<br>
+								<br>
+								Algorithms that perform well on DABS could be useful for new scientific, medical, multimodal, or other real-world settings. 
+								</p>
 							<ul class="actions">	
 								</li><a href="#one" class="button">Read the Paper</a></li>
 								<li><a href="https://github.com/alextamkin/domain_agnostic_benchmark" class="button">See the Code</a></li>
@@ -71,7 +78,10 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Architecture</h2>
-									<p>A domain-agnostic SSL algorithm needs to be capable of processing arbitrary kinds of data. The DABS baselines use a transformer architecture that operates on embeddings produced by patchifying or tokenizing inputs. However, other approaches (e.g. Perceivers) which operate on raw bytes are also welcomed.</p>
+									<p>General SSL algorithms need to work on arbitrary kinds of data. 
+										<br><br>
+										The DABS baselines use a transformer that operates on patch/token embeddings, but we encourage other approaches that are generally-applicable (e.g. Perceivers) 
+										</p>
 									<ul class="actions">
 									</ul>
 								</div>
@@ -81,8 +91,11 @@
 							<a class="image"><img src="images/Pic02.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Pretraining Objective</h2>
-									<p>A pretraining objective mathematically specifies how models learn from unlabeled data. The same objective needs to learn useful representations for inputs as diverse as high-resolution images, text, and wearable signals data, as well as other real-world domains.</p>
+									<h2>Pretraining Tasks</h2>
+									<p>Pretraining tasks (e.g. masked language modeling) define the model's learning objective on unlabeled data
+										<br><br>
+										The same objective needs to learn useful representations for different domains, including sensor data, images, text, and future domains that will be added to the benchmark
+										</p>
 									<ul class="actions">
 									
 									</ul>
@@ -94,7 +107,10 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Adaptation</h2>
-									<p>After a model is pretrained, it should perform well on labeled tasks within a domain. We evaluate our baseline methods with linear classifiers, but encourage participants to explore finetuning or other general adaptation methods (e.g. lightweight finetuning) as long as fair comparisons are provided to previous methods.</p>
+									<p>Pretrained models should perform well on downstream tasks in the same domain
+										<br><br>
+										We evaluate our baseline methods with linear classifiers, but other adaptation strategies (e.g. finetuning) are allowed, as long as fair comparisons are provided to previous methods.
+										</p>
 									<ul class="actions">
 									</ul>
 								</div>
@@ -115,11 +131,14 @@
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Domains</h2>
-							<p>DABS is organized around seven <em>domains</em>, which are kinds of data that a self-supervised model might be trained on. Future installments of DABS will include other domains to evaluate the real-world generalizability of proposed algorithms. More information about selection criteria and specific datasets can be found in the DABS paper.</p>
+							<p>DABS is organized around seven <em>domains</em>, which are kinds of data that a self-supervised model might be trained on. 
+								<br><br>
+								Future installments of DABS will include other domains to assess the real-world usability of proposed algorithms.
+								</p>
 							<p>Select a domain to view more information about the datasets used.</p>
 							<div class="features">
 
-								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/speech.html">
+								<section style="white-space: nowrap; min-width: 100%;" class="domain" data-link="/domains/images.html">
 									<i style="display: inline-block; margin-top: -1.2em;" class="icon solid major fa-image fa-lg"></i>
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Natural Images</span>
 								</section>
@@ -151,10 +170,11 @@
 									<span style="display: inline-block; font-weight: bold; margin-top: -0.7em; margin-bottom: 0.5em; margin-left: 1em; font-size: 2em; color: rgba(255, 255, 255, 1);">Multilingual Text</span>
 								</section>
 							</div>
-							<p>For information about dataset licenses, data collection, and consent please see the appendix of the DABS paper.</p>
+							<p>For information about dataset licenses, data collection, and consent please see the appendix of the DABS paper.</p> 
+							<!-- TODO LINK -->
 						</div>
 					</section>
-
+				<!-- TODO CITATION -->
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
