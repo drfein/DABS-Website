@@ -1100,6 +1100,14 @@ input, select, textarea {
 				.visibledesktop {display:none;}
 			}
 
+			.visiblemobile {display:none;}
+			.notvisiblemobile {display:block;}
+
+			@media (max-width : 480px) {
+				.visiblemobile {display:block;}
+				.notvisiblemobile {display:none;}
+			}
+
 			.roundedCorner .profilePic {
 				border-radius: 50%;
 				/* border: solid 5px; */
