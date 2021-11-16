@@ -36,7 +36,7 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Overview</a></li>
-							<li><a href="#one">How it works</a></li>
+							<li><a href="#one">Challenges</a></li>
 							<li><a href="#two">Domains</a></li>
 							<li><a href="#three">Citation</a></li>
 						</ul>
@@ -54,13 +54,13 @@
 							<p class="header">The <strong>D</strong>omain <strong>A</strong>gnostic <strong>B</strong>enchmark for <strong>S</strong>elf-Supervised Learning.</p>
 							<hr class="major">
 							
-							<p class="small" >Can we learn from unlabeled data in any modality or domain? 
+							<p class="small" >Can we make self-supervised learning (SSL) a general technology that works on any kind of data?
 								<br>
 								<br>
-								DABS measures the performance of <em>general</em> self-supervised learning algorithms that aren't tied to a particular domain. 
+								DABS measures the performance of SSL methods on seven diverse domains, including chest x-rays, wearable sensors, and multilingual text. Models are trained on an unlabeled dataset in each domain, then evaluated on downstream tasks in the same domain.
 								<br>
 								<br>
-								Algorithms that perform well on DABS could be useful for new scientific, medical, multimodal, or other real-world settings. 
+								SSL methods that perform well on DABS could be useful for scientific, medical, multimodal, or other real-world settings where labels are scarce or expensive to collect.
 								</p>
 							<ul class="actions">	
 								</li><a href="#one" class="button">Read the Paper</a></li>
@@ -78,7 +78,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Architecture</h2>
-									<p>General SSL algorithms need to work on arbitrary kinds of data. 
+									<p>General SSL algorithms need to work on arbitrary kinds of data including discrete, continuous, or multimodal inputs. 
 										<br><br>
 										The DABS baselines use a <a href="https://arxiv.org/abs/1706.03762">transformer</a> that operates on patch/token embeddings, but we encourage other approaches that are generally-applicable (e.g. <a href="https://arxiv.org/abs/2103.03206">Perceivers</a>). 
 										</p>
@@ -91,14 +91,12 @@
 							<a class="image"><img src="images/Pic02.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Pretraining Tasks</h2>
-									<p>Pretraining tasks (e.g. masked language modeling) define the model's learning objective on unlabeled data.
+									<h2>Pretraining Objective</h2>
+									<p>Pretraining objectives (e.g. masked language modeling) define the model's learning task on unlabeled data.
 										<br><br>
-										The same objective needs to learn useful representations for different domains, including sensor data, images, text, and future domains that will be added to the benchmark.
+										The same objective needs to learn useful representations for different domains, including sensor data, images, text, and future domains that will be added to the benchmark.									
 										</p>
-									<ul class="actions">
-									
-									</ul>
+
 								</div>
 							</div>
 						</section>
@@ -106,10 +104,10 @@
 							<a class="image"><img src="images/Pic03.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Adaptation</h2>
-									<p>Pretrained models should perform well on downstream tasks in the same domain.
+									<h2>Transfer Learning</h2>
+									<p>SSL algorithms should enable models to perform well on downstream tasks in the same domain.
 										<br><br>
-										We evaluate our baseline methods with linear classifiers, but other adaptation strategies (e.g. finetuning) are allowed, as long as fair comparisons are provided to previous methods.
+										We evaluate our baseline methods with linear classifiers, but other adaptation strategies (e.g. finetuning) are allowed, as long as these strategies are held constant when comparing different architectures or pretraining approaches.										
 										</p>
 									<ul class="actions">
 									</ul>
