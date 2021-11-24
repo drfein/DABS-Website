@@ -60,10 +60,10 @@
 								DABS measures the performance of SSL methods on seven diverse domains, including chest x-rays, wearable sensors, and multilingual text. Models are trained on an unlabeled dataset in each domain, then evaluated on downstream tasks in the same domain.
 								<br>
 								<br>
-								SSL methods that perform well on DABS could be useful for scientific, medical, multimodal, or other real-world settings where labels are scarce or expensive to collect.
+								SSL methods that perform well on DABS could be especially useful for scientific, medical, multimodal, or other real-world settings where labels are scarce or expensive to collect.
 								</p>
 							<ul class="actions">	
-								</li><a href="#one" class="button">Read the Paper</a></li>
+								</li><a href="https://arxiv.org/abs/2111.12062" class="button">Read the Paper</a></li>
 								<li><a href="https://github.com/alextamkin/dabs" class="button">See the Code</a></li>
 								<li><a href="team.html" class="button">Meet the Team</a></li>
 								<li><a href="https://dabsleaderboard.netlify.app/" class="button">Leaderboard</a></li>
@@ -92,7 +92,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Pretraining Objective</h2>
-									<p>Pretraining objectives (e.g. masked language modeling) define the model's learning task on unlabeled data.
+									<p>Pretraining objectives (e.g. <a href="https://arxiv.org/abs/1810.04805" >masked language modeling</a>) define the model's learning task on unlabeled data.
 										<br><br>
 										The same objective needs to learn useful representations for different domains, including sensor data, images, text, and future domains that will be added to the benchmark.									
 										</p>
@@ -207,7 +207,7 @@
 									</div>
 								</section>
 							</div>
-							<p>For information about dataset licenses, data collection, and consent please see the appendix of the DABS paper.</p> 
+							<p>For information about dataset licenses, data collection, and consent please see the appendix of <a href="https://arxiv.org/abs/2111.12062" >the DABS paper</a>.</p> 
 							<!-- TODO LINK -->
 						</div>
 					</section>
@@ -217,12 +217,13 @@
 						<div class="inner">
 							<h2>BibTeX Citation</h2>
 							<pre><code>
-@techreport{WahCUB_200_2011,
-	Title = {{The Caltech-UCSD Birds-200-2011 Dataset}},
-	Author = {Wah, C. and Branson, S. and Welinder, P. and Perona, P. and Belongie, S.},
-	Year = {2011}
-	Institution = {California Institute of Technology},
-	Number = {CNS-TR-2011-001}
+@misc{tamkin2021dabs,
+	title={DABS: A Domain-Agnostic Benchmark for Self-Supervised Learning},
+	author={Alex Tamkin and Vincent Liu and Rongfei Lu and Daniel Fein and Colin Schultz and Noah Goodman},
+	year={2021},
+	eprint={2111.12062},
+	archivePrefix={arXiv},
+	primaryClass={cs.LG}
 }
 						</code></pre>
 							<br>
